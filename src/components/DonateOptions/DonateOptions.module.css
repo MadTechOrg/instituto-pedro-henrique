@@ -1,0 +1,29 @@
+.donate {
+  @apply flex h-auto justify-between items-center flex-col;
+  @apply bg-watusi p-2 py-10 md:p-20 min-h-full;
+}
+
+.donate__optionsContainer {
+  @apply grid grid-cols-2 grid-rows-3 gap-y-4 gap-x-8 w-5/6 mt-14;
+  @apply md:grid-cols-3 md:grid-rows-2 md:gap-y-8;
+}
+
+.donate__option {
+  @apply flex flex-col justify-center items-center;
+}
+
+.donate__optionImage {
+  @apply w-24 md:w-44;
+}
+
+.donate__option h3 {
+  @apply text-center text-lg md:text-2xl font-bold;
+}
+
+.donate__money {
+  @apply flex gap-8 mt-14;
+}
+
+.donate__money h3 {
+  @apply text-xl font-bold;
+}

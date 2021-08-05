@@ -43,7 +43,7 @@ const renderProjects = () => mockProjects.map(({ url, imageSrc, name }) => (
 export default function About() {
   return (
     <article className={style.about}>
-      <h1 className={style.about__title}>Quem somos</h1>
+      <h1 className="article-title">Quem somos</h1>
       <main className={style.about__content}>
         <p>
           Instituto Pedro Henrique é uma organização sem fins lucrativos com foco no impacto
