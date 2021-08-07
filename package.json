@@ -10,6 +10,7 @@
     "lint:fix": "npx eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
     "autoprefixer": "^9.8.6",
     "next": "11.0.1",
     "postcss": "^7.0.36",
