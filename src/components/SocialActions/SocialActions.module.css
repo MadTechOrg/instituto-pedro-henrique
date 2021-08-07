@@ -1,0 +1,18 @@
+.socialAction {
+  height: 95vh;
+  @apply flex justify-between items-center flex-col;
+  @apply bg-quarterPearl p-2 py-10 md:p-20 min-h-full;
+}
+
+.socialAction__carousel {
+  @apply flex gap-1 w-11/12 overflow-x-auto overflow-y-hidden h-auto;
+}
+
+.socialAction__carouselItem {
+  @apply transform hover:scale-105 transition-all delay-100 cursor-pointer;
+  @apply w-52 md:w-1/5 flex-none;
+}
+
+.socialAction__carousel::-webkit-scrollbar {
+  @apply h-1 w-1;
+}
