@@ -1,22 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import sgMail from '@sendgrid/mail';
+import { EmailAttributes } from '../../interfaces/email';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
-
-interface EmailAttributes {
-  subject: string,
-  senderName: string,
-  senderEmail: string,
-  text: string,
-}
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
   if (req.method !== 'POST') return res.status(404).send('not_found');
-
-  const emailTemplate: EmailAttributes = req.body;
+  const emailTemplate: EmailAttributes = JSON.parse(req.body);
 
   const email = {
     to: 'igor_souto@outlook.com',

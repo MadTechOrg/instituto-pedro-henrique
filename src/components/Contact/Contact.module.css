@@ -1,0 +1,21 @@
+.contact {
+  @apply flex h-auto justify-between items-center flex-col;
+  @apply bg-quarterPearl p-3 py-10 md:p-20 min-h-full;
+}
+
+.contact__cta {
+  @apply mt-6 text-lg text-center;
+}
+
+.contact__main {
+  @apply flex relative mt-4 flex-col items-center gap-6 w-full max-w-screen-sm;
+}
+
+.contact_socialMediaitem {
+  @apply mx-5;
+}
+
+.contact__watermark {
+  @apply hidden md:block absolute z-0 opacity-20;
+  @apply -left-80 -top-9;
+}
