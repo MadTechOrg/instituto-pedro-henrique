@@ -36,7 +36,7 @@ const donationOptions = [
 ];
 
 const renderDonatioOptions = () => donationOptions.map(({ label, image }) => (
-  <div className={style.donate__option}>
+  <div className={style.donate__option} key={label}>
     <div className={style.donate__optionImage}>
       <Image
         src={image}
@@ -49,7 +49,7 @@ const renderDonatioOptions = () => donationOptions.map(({ label, image }) => (
 
 export default function DonateOptions() {
   return (
-    <article className={style.donate}>
+    <article id="como-contribuir" className={style.donate}>
       <h1 className="article-title">Como contribuir</h1>
       <main className={style.donate__optionsContainer}>
         {renderDonatioOptions()}

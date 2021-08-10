@@ -1,0 +1,7 @@
+.form {
+  @apply flex flex-col gap-5 items-center w-full z-10 px-3;
+}
+
+.form input, .form textarea {
+  @apply p-3 md:p-4 md:text-lg border border-conch rounded w-full placeholder-conch;
+}

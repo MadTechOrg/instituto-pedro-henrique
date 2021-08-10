@@ -59,7 +59,7 @@ const renderSocialActions = () => mockActions.map(({ url, imageSrc, name }) => (
 
 export default function SocialActions() {
   return (
-    <article className={style.socialAction}>
+    <article id="nossas-acoes" className={style.socialAction}>
       <h1 className="article-title">Nossas Ações Sociais</h1>
       <div className={style.socialAction__lastAction}>
         <Image
