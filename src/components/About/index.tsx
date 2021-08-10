@@ -42,7 +42,7 @@ const renderProjects = () => mockProjects.map(({ url, imageSrc, name }) => (
 
 export default function About() {
   return (
-    <article className={style.about}>
+    <article id="quem-somos" className={style.about}>
       <h1 className="article-title">Quem somos</h1>
       <main className={style.about__content}>
         <p>

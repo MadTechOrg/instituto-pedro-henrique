@@ -1,6 +1,6 @@
 .about {
   @apply flex justify-center items-center flex-col;
-  @apply bg-conch w-full h-auto p-2 py-28 md:p-40;
+  @apply bg-conch w-full h-auto p-2 py-28 md:p-24;
 }
 
 .about__content {

@@ -1,11 +1,11 @@
 .socialAction {
-  height: 95vh;
-  @apply flex justify-between items-center flex-col;
+  @apply flex min-h-screen h-auto justify-between items-center flex-col;
   @apply bg-quarterPearl p-2 py-10 md:p-20 min-h-full;
 }
 
 .socialAction__carousel {
-  @apply flex gap-1 w-11/12 overflow-x-auto overflow-y-hidden h-auto;
+  @apply flex gap-1 overflow-x-auto overflow-y-hidden;
+  @apply w-11/12 h-auto min-h-full;
 }
 
 .socialAction__carouselItem {
