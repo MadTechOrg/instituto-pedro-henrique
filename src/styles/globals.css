@@ -17,6 +17,7 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
+
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -32,6 +33,30 @@ footer,header,hgroup,menu,nav,section {
 
 html {
 	scroll-behavior: smooth;
+}
+
+.notion {
+	--bg-color: #FFFCF1 !important;
+}
+
+.notion-viewport {
+	display: none !important;
+}
+
+.notion-page-cover {
+  max-width: 900px;
+  border-radius: 24px;
+  box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+}
+
+@media only screen and (max-width: 1200px) {
+  .notion-page-cover {
+    border-radius: 0;
+  }
+}
+
+.notion-header .nav-header {
+	display: none;
 }
 
 .primary-button {

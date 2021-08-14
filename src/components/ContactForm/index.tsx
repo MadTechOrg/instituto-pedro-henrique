@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+import axios from 'axios';
 import { FormEvent } from 'react';
 import style from './ContactForm.module.css';
 import { EmailAttributes, EventTargetForm } from '../../interfaces/email';
@@ -16,10 +17,8 @@ const sendEmail = async (event: FormEvent<HTMLFormElement>) => {
   const emailAttributes = getEmailAttributes(event.target as EventTargetForm);
 
   try {
-    await fetch('/api/contact', {
-      method: 'POST',
-      body: JSON.stringify(emailAttributes),
-    });
+    await axios.post('/api/contact', emailAttributes);
+
     Swal.fire({
       title: 'E-mail enviado com sucesso!',
       text: 'Em breve retornaremos sua mensagem.',
