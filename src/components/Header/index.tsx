@@ -5,19 +5,19 @@ import style from './Header.module.css';
 
 const links = [
   {
-    url: '#quem-somos',
+    url: '/#quem-somos',
     label: 'Quem somos',
   },
   {
-    url: '#nossas-acoes',
+    url: '/#nossas-acoes',
     label: 'Ações',
   },
   {
-    url: '#como-contribuir',
+    url: '/#como-contribuir',
     label: 'Como contribuir',
   },
   {
-    url: '#contato',
+    url: '/#contato',
     label: 'Contato',
   },
 ];
@@ -31,11 +31,15 @@ const renderLinks = () => links.map(({ url, label }) => (
 export default function Header() {
   return (
     <header className={style.header}>
-      <Image
-        src={HomeLogo}
-        alt="Instituto Pedro Henrique Logo"
-        priority
-      />
+      <Link href="/" passHref>
+        <div className={style.header__logo}>
+          <Image
+            src={HomeLogo}
+            alt="Instituto Pedro Henrique Logo"
+            priority
+          />
+        </div>
+      </Link>
       <nav className={style.header__navigation}>
         {renderLinks()}
       </nav>

@@ -7,6 +7,10 @@
   @apply hidden sm:mt-5 sm:flex gap-4 md:gap-8;
 }
 
+.header__logo {
+  @apply cursor-pointer;
+}
+
 .header__link {
   @apply relative cursor-pointer whitespace-nowrap font-bold md:text-xl;
   @apply  transition-all delay-100 hover:text-burntSienna ;

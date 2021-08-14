@@ -1,0 +1,38 @@
+.post {
+  @apply flex justify-center bg-quarterPearl min-h-screen pt-9 px-5 md:px-32;
+}
+
+.post__article {
+  @apply w-screen;
+}
+
+.post__title {
+  @apply text-3xl md:text-5xl mb-9 font-bold;
+}
+
+.post__back {
+  @apply text-burntSienna text-xl font-bold p-2 rounded-xl;
+  @apply hover:bg-burntSienna hover:bg-opacity-20 transition-all duration-300;
+}
+
+.post__pageList {
+  @apply flex flex-col justify-start items-center gap-8;
+  @apply md:flex-row md:justify-center md:items-start md:flex-wrap;
+}
+
+.post__page {
+  @apply shadow-md rounded-lg bg-conch h-60 w-full md:w-72 cursor-pointer;
+  @apply transform transition-all ease-out duration-300 hover:scale-105;
+}
+
+.post__pageImage {
+  @apply h-3/4 bg-gray-500 rounded-t-lg;
+}
+
+.post__pageImage img {
+  @apply rounded-t-lg max-h-full w-full;
+}
+
+.post__pageTitle {
+  @apply p-3 font-bold text-lg;
+}
