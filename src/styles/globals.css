@@ -22,7 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	color: #626262;
+	color: #585858;
 }
 
 
@@ -60,7 +60,8 @@ html {
 }
 
 .primary-button {
-	@apply bg-burntSienna py-2 px-8 rounded-xl text-xl text-white font-semibold;
+	@apply py-2 px-8 rounded-xl text-xl text-white font-semibold;
+	@apply bg-yellow-600 bg-gradient-to-r from-burntSienna to-yellow-600;
 }
 
 .article-title {

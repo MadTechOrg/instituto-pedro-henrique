@@ -35,7 +35,7 @@ const renderProjects = () => mockProjects.map(({ url, imageSrc, name }) => (
           alt={name}
         />
       </div>
-      <h3>{name}</h3>
+      <p>{name}</p>
     </div>
   </Link>
 ));

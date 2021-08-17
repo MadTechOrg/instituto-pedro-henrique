@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Favela from '../../assets/favela.png';
+import FavelaLarge from '../../assets/favela-large.png';
+import FavelaSmall from '../../assets/favela-small.png';
 import style from './Banner.module.css';
 
 export default function Banner() {
@@ -22,11 +23,18 @@ export default function Banner() {
           </Link>
         </main>
         <aside>
-          <Image
-            src={Favela}
-            alt="Periferia com pipa no céu"
-            priority
-          />
+          <div className={style['banner__image--small']}>
+            <Image
+              src={FavelaSmall}
+              alt="Periferia com pipa no céu"
+            />
+          </div>
+          <div className={style['banner__image--large']}>
+            <Image
+              src={FavelaLarge}
+              alt="Periferia com pipa no céu"
+            />
+          </div>
         </aside>
       </section>
     </article>

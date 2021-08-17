@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { getPageTitle } from 'notion-utils';
 import { NotionAPI } from 'notion-client';
 import { NotionRenderer } from 'react-notion-x';
-import { BlockMap } from 'notion-types';
+import { Block, BlockMap } from 'notion-types';
 import {
   BlockItem, Context, RecordMap, PageCover,
 } from '../../interfaces/post';
@@ -30,31 +30,38 @@ export async function getStaticPaths() {
   };
 }
 
-const getImageUrl = (url: string) => {
+const getImageUrl = (block: Block) => {
+  const format = block.format as PageCover;
+  const url = format?.page_cover || '';
+
   const imageHasDomain = url.includes('http');
 
   return `${imageHasDomain ? '' : 'https://www.notion.so'}${url}`;
 };
 
-const getChildrenPages = (block: BlockMap, pageTitle: string) => Object
+const getChildrenPages = (block: BlockMap, pageTitle: string = '') => Object
   .values(block)
   .filter(({ value: { type, properties } }) => (
     type === 'page' && properties?.title[0][0] !== pageTitle
   ));
 
+const goBack = () => {
+  window.history.back();
+};
+
 const renderPosts = (posts: Array<BlockItem>) => posts
   .map(({ value }: BlockItem) => {
-    const format = value.format as PageCover;
+    const imageUrl = getImageUrl(value);
 
     return value && (
       <Link href={value.id} passHref key={value.id}>
         <div className={style.post__page}>
           <div className={style.post__pageImage}>
             {
-              format?.page_cover && (
+              imageUrl && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={getImageUrl(format?.page_cover)}
+                  src={imageUrl}
                   alt=""
                 />
               )
@@ -74,14 +81,23 @@ export default function BlogPost({ recordMap }: RecordMap) {
   const title = getPageTitle(recordMap);
   const childrenPages = getChildrenPages(recordMap.block, title);
 
-  const goBack = () => {
-    window.history.back();
+  const meta = {
+    title: `Instituto Pedro Henrique - ${title}`,
+    description: `Instituto Pedro Henrique de Direitos Humanos, Transformando a realidade da periferia
+      através de Oportunidades e Educação.`,
+    image: getImageUrl(getChildrenPages(recordMap.block)[0].value),
   };
 
   return (
     <>
       <Head>
-        <meta name="description" content={title} />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={meta.title} />
+        <title>{title}</title>
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content={meta.image} />
+        <meta name="description" content={meta.description} />
         <title>{title}</title>
       </Head>
       <Header />
