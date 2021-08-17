@@ -14,3 +14,11 @@
 .banner__cta {
   @apply text-center font-medium text-lg md:text-3xl;
 }
+
+.banner__image--small {
+  @apply block sm:hidden;
+}
+
+.banner__image--large {
+  @apply hidden sm:block;
+}

@@ -43,7 +43,7 @@ const renderDonatioOptions = () => donationOptions.map(({ label, image }) => (
         alt={label}
       />
     </div>
-    <h3>{label}</h3>
+    <p>{label}</p>
   </div>
 ));
 
@@ -62,7 +62,7 @@ export default function DonateOptions() {
               alt="Dinheiro"
             />
           </div>
-          <h3>Pix:</h3>
+          <p>Pix:</p>
         </div>
       </footer>
     </article>
