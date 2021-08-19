@@ -5,6 +5,7 @@ import About from '../components/About';
 import SocialActions from '../components/SocialActions';
 import DonateOptions from '../components/DonateOptions';
 import Contact from '../components/Contact';
+import Transparency from '../components/Transparency';
 
 const meta = {
   title: 'Instituto Pedro Henrique',
@@ -31,6 +32,7 @@ export default function Home() {
         <SocialActions />
         <DonateOptions />
         <Contact />
+        <Transparency />
       </main>
     </html>
   );
