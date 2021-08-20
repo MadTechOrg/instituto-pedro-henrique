@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Image from 'next/image';
 import style from './About.module.css';
 import Gedevim from '../../assets/about/gedevim.png';

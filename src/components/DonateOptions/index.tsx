@@ -54,7 +54,7 @@ export default function DonateOptions() {
       <main className={style.donate__optionsContainer}>
         {renderDonatioOptions()}
       </main>
-      <footer>
+      {/* <footer>
         <div className={style.donate__money}>
           <div className={style.donate__optionImage}>
             <Image
@@ -64,7 +64,7 @@ export default function DonateOptions() {
           </div>
           <p>Pix:</p>
         </div>
-      </footer>
+      </footer> */}
     </article>
   );
 }

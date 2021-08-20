@@ -16,7 +16,7 @@
   @apply w-24 md:w-44;
 }
 
-.donate__option h3 {
+.donate__option p {
   @apply text-center text-lg md:text-2xl font-bold;
 }
 
@@ -24,6 +24,6 @@
   @apply flex gap-8 mt-14;
 }
 
-.donate__money h3 {
+.donate__money p {
   @apply text-xl font-bold;
 }
