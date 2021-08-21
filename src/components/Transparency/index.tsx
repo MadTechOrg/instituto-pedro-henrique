@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Image from 'next/image';
 import style from './Transparency.module.css';
 import Foundation from '../../assets/transparency/foundation.png';
@@ -40,7 +40,7 @@ const renderTransparencyFiles = () => transparencyFiles.map(({ url, imageSrc, la
 
 export default function Transparency() {
   return (
-    <article id="quem-somos" className={style.tranparency}>
+    <article id="transparencia" className={style.tranparency}>
       <h1 className="article-title">Transparência</h1>
       <main className={style.tranparency__text}>
         <p>Conduzimos nossas atividades e relações de forma íntegra e transparente.</p>

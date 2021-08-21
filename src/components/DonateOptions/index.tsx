@@ -6,7 +6,7 @@ import Furniture from '../../assets/donations/furniture.png';
 import Hygiene from '../../assets/donations/hygiene.png';
 import Materials from '../../assets/donations/materials.png';
 import Toys from '../../assets/donations/toys.png';
-import Money from '../../assets/donations/money.png';
+// import Money from '../../assets/donations/money.png';
 
 const donationOptions = [
   {

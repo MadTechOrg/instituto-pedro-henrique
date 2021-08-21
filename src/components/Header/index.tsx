@@ -20,6 +20,14 @@ const links = [
     url: '/#contato',
     label: 'Contato',
   },
+  {
+    url: '/#transparencia',
+    label: 'Transparência',
+  },
+  {
+    url: '/#parceiros',
+    label: 'Parceiros',
+  },
 ];
 
 const renderLinks = () => links.map(({ url, label }) => (

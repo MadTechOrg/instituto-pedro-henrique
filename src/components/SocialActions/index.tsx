@@ -51,7 +51,7 @@ const trimStringBy = (text: string, max: number) => {
 
 const renderSocialActions = () => actions.map(({ imageSrc, name }) => (
   // <Link href={url} passHref key={name}>
-  <div className={style.socialAction__carouselItem}>
+  <div className={style.socialAction__carouselItem} key={name}>
     <Image
       src={imageSrc}
       alt={name}
