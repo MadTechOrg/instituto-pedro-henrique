@@ -1,0 +1,12 @@
+.partners {
+  @apply flex h-auto justify-between items-center flex-col;
+  @apply bg-quarterPearl p-3 py-10 md:p-20 min-h-full;
+}
+
+.partners__partnersContainer {
+  @apply grid grid-cols-1 sm:grid-cols-3 justify-center w-full mt-6;
+}
+
+.partners__item {
+  @apply flex justify-center items-center px-14 md:px-20 py-5;
+}

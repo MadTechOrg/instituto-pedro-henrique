@@ -9,10 +9,28 @@
 }
 
 .socialAction__carouselItem {
-  @apply transform hover:scale-105 transition-all delay-100 cursor-pointer;
-  @apply w-52 md:w-1/5 flex-none;
+  @apply transform hover:scale-105 transition-all duration-200 cursor-pointer;
+}
+
+.socialAction__carouselItem img {
+  min-width: 280px;
+  @apply md:h-52 h-40 w-11/12 md:w-4/6 relative;
 }
 
 .socialAction__carousel::-webkit-scrollbar {
-  @apply h-1 w-1;
+  @apply h-2 w-2;
+}
+
+.socialAction__subtitle {
+  @apply my-4 text-center text-lg;
+}
+
+.socialAction__imageTitle {
+  @apply relative -top-9 sm:-top-10 py-1 px-2;
+  background: rgb(51,51,51);
+  background: linear-gradient(0deg, rgba(51,51,51,0.7) 56%, rgba(153,153,153,0.6) 100%);
+}
+
+.socialAction__imageTitle p {
+  @apply text-sm sm:text-base text-white overflow-ellipsis whitespace-nowrap;
 }

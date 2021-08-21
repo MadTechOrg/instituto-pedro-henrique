@@ -1,43 +1,46 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import Image from 'next/image';
 import style from './About.module.css';
-import SquarePlaceholder from '../../assets/placeholder-square.jpg';
+import Gedevim from '../../assets/about/gedevim.png';
+import PortaEmPorta from '../../assets/about/de-porta-em-porta.png';
+import Crescer from '../../assets/about/crescer.png';
+import DireitosHumanos from '../../assets/about/direitos-humanos.png';
 
 const mockProjects = [
   {
-    url: 'https://github.com/soutoigor/easy-body-calc',
-    imageSrc: SquarePlaceholder,
+    url: '',
+    imageSrc: Gedevim,
     name: 'Gedevim',
   },
   {
-    url: 'https://github.com/soutoigor/easy-body-calc',
-    imageSrc: SquarePlaceholder,
-    name: 'Transformar',
+    url: '',
+    imageSrc: Crescer,
+    name: 'Crescer',
   },
   {
-    url: 'https://github.com/soutoigor/easy-body-calc',
-    imageSrc: SquarePlaceholder,
+    url: '',
+    imageSrc: PortaEmPorta,
     name: 'De porta em porta',
   },
   {
-    url: 'https://github.com/soutoigor/easy-body-calc',
-    imageSrc: SquarePlaceholder,
+    url: '',
+    imageSrc: DireitosHumanos,
     name: 'Auxílio em caso de violação dos direitos humanos',
   },
 ];
 
-const renderProjects = () => mockProjects.map(({ url, imageSrc, name }) => (
-  <Link href={url} passHref key={name}>
-    <div className={style.about__project}>
-      <div className={style.about__projectImage}>
-        <Image
-          src={imageSrc}
-          alt={name}
-        />
-      </div>
-      <p>{name}</p>
+const renderProjects = () => mockProjects.map(({ imageSrc, name }) => (
+  // <Link href={url} passHref key={name}>
+  <div className={style.about__project} key={name}>
+    <div className={style.about__projectImage}>
+      <Image
+        src={imageSrc}
+        alt={name}
+      />
     </div>
-  </Link>
+    <p>{name}</p>
+  </div>
+  // </Link>
 ));
 
 export default function About() {

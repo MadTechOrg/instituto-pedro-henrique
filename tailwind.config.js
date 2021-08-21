@@ -9,6 +9,7 @@ module.exports = {
         quarterPearl: '#FFFCF1',
         conch: '#C3D3C7',
         watusi: '#FFDCCF',
+        tasman: '#DCE3DD',
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],

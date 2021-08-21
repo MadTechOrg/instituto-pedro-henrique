@@ -6,7 +6,7 @@ import Furniture from '../../assets/donations/furniture.png';
 import Hygiene from '../../assets/donations/hygiene.png';
 import Materials from '../../assets/donations/materials.png';
 import Toys from '../../assets/donations/toys.png';
-import Money from '../../assets/donations/money.png';
+// import Money from '../../assets/donations/money.png';
 
 const donationOptions = [
   {
@@ -54,7 +54,7 @@ export default function DonateOptions() {
       <main className={style.donate__optionsContainer}>
         {renderDonatioOptions()}
       </main>
-      <footer>
+      {/* <footer>
         <div className={style.donate__money}>
           <div className={style.donate__optionImage}>
             <Image
@@ -64,7 +64,7 @@ export default function DonateOptions() {
           </div>
           <p>Pix:</p>
         </div>
-      </footer>
+      </footer> */}
     </article>
   );
 }

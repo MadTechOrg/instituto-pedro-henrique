@@ -10,17 +10,17 @@ const socialMedia = [
   {
     image: Facebook,
     alt: 'Facebook',
-    link: '',
+    link: 'https://www.facebook.com/InstitutoPedroHenriqueDH',
   },
   {
     image: Instagram,
     alt: 'Instagram',
-    link: '',
+    link: 'https://www.instagram.com/institutopedrohenrique',
   },
   {
     image: WhatsApp,
     alt: 'WhatsApp',
-    link: '',
+    link: 'https://api.whatsapp.com/send?phone=5511961382744&text=Ol%C3%A1!%20Vim%20pelo%20site%20para%20conversar%20sobre%20o%20Instituto%20Pedro%20Henrique%20:)',
   },
 ];
 
