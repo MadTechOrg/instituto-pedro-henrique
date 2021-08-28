@@ -64,6 +64,10 @@ html {
 	@apply bg-yellow-600 bg-gradient-to-r from-burntSienna to-yellow-600;
 }
 
+.primary-button:disabled {
+	@apply text-gray-400 bg-none bg-gray-300 border-2 border-gray-400 opacity-70;
+}
+
 .article-title {
   @apply text-center text-3xl md:text-4xl font-bold;
 }
