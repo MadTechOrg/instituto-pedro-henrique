@@ -9,10 +9,9 @@ export default function handler(
   res: NextApiResponse,
 ) {
   if (req.method !== 'POST') return res.status(404).send('not_found');
-  const emailTemplate: EmailAttributes = JSON.parse(req.body);
-
+  const emailTemplate: EmailAttributes = req.body;
   const email = {
-    to: 'igor_souto@outlook.com',
+    to: process.env.CONTACT_EMAIL_DESTINATARY,
     from: 'institutopedrohenriquedh@gmail.com',
     templateId: 'd-7d86c013ca18464d8eb10c53783d0393',
     ip_pool: 'transactional',

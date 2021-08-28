@@ -17,7 +17,7 @@ const sendEmail = async (event: FormEvent<HTMLFormElement>) => {
   const emailAttributes = getEmailAttributes(event.target as EventTargetForm);
 
   try {
-    await axios.post('/api/contact', emailAttributes);
+    await axios.post('api/contact', emailAttributes);
 
     Swal.fire({
       title: 'E-mail enviado com sucesso!',
