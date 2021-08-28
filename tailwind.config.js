@@ -14,6 +14,9 @@ module.exports = {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
+      gridTemplateRows: {
+        auto: 'auto',
+      },
     },
   },
   variants: {

@@ -22,7 +22,7 @@ export default function Banner() {
             <button type="button" className="primary-button">Ajude!</button>
           </Link>
         </main>
-        <aside>
+        <aside className={style.banner__imageContainer}>
           <div className={style['banner__image--small']}>
             <Image
               src={FavelaSmall}
