@@ -4,7 +4,7 @@ import { EmailAttributes } from '../../interfaces/email';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY as string);
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
@@ -18,7 +18,7 @@ export default function handler(
     dynamic_template_data: emailTemplate,
   };
 
-  sgMail.send(email);
+  await sgMail.send(email);
 
   return res.status(200).json({});
 }
