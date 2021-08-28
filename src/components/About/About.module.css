@@ -4,7 +4,7 @@
 }
 
 .about__content {
-  @apply flex flex-col gap-4 items-center mt-10 md:mt-12 w-full md:w-1/2 ;
+  @apply flex flex-col gap-4 items-center mt-10 md:mt-12 w-full xl:w-1/2;
 }
 
 .about__content p {

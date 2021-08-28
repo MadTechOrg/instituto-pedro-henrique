@@ -1,6 +1,6 @@
 .header {
   @apply flex sm:flex-col p-4 bg-quarterPearl sm:items-center justify-between;
-  @apply md:flex-row md:px-10 md:items-start;
+  @apply lg:flex-row lg:px-10 lg:items-start;
 }
 
 .header__navigation {
@@ -8,12 +8,13 @@
 }
 
 .header__logo {
+  min-width: 280px;
   @apply cursor-pointer;
 }
 
 .header__link {
   @apply relative cursor-pointer whitespace-nowrap font-bold md:text-xl;
-  @apply  transition-all delay-100 hover:text-burntSienna ;
+  @apply  transition-all delay-100 hover:text-burntSienna;
 }
 
 .header__link:before {

@@ -31,9 +31,11 @@ const links = [
 ];
 
 const renderLinks = () => links.map(({ url, label }) => (
-  <Link href={url} passHref key={url}>
-    <span className={style.header__link}>{label}</span>
-  </Link>
+  <span className={style.header__link} key={url}>
+    <Link href={url} passHref>
+      {label}
+    </Link>
+  </span>
 ));
 
 export default function Header() {
