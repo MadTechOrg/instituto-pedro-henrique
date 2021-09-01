@@ -1,42 +1,18 @@
-// import Link from 'next/link';
 import Image from 'next/image';
 import style from './Transparency.module.css';
-import Foundation from '../../assets/transparency/foundation.png';
-import Statute from '../../assets/transparency/statute.png';
 import RegistrationStatus from '../../assets/transparency/registration-status.png';
 
-const transparencyFiles = [
-  {
-    url: '/ata-da-fundacao.pdf',
-    imageSrc: Foundation,
-    label: 'Ata da Fundação',
-  },
-  {
-    url: '/estatuto-social.pdf',
-    imageSrc: Statute,
-    label: 'Estatuto Social',
-  },
-  {
-    url: '/comprovante-de-inscricao.pdf',
-    imageSrc: RegistrationStatus,
-    label: 'Situação Cadastral',
-  },
-];
+const transparency = {
+  url: '/comprovante-de-inscricao.pdf',
+  imageSrc: RegistrationStatus,
+  label: 'Situação Cadastral',
+};
 
-const renderTransparencyFiles = () => transparencyFiles.map(({ url, imageSrc, label }) => (
-  <a href={url} target="_blank" key={label} rel="noreferrer">
-    <div className={style.transparency__file}>
-      <div className={style.transparency__fileImage}>
-        <Image
-          src={imageSrc}
-          alt={label}
-          title="Clique para abrir"
-        />
-      </div>
-      <p>{label}</p>
-    </div>
-  </a>
-));
+const externalLinkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+  </svg>
+);
 
 export default function Transparency() {
   return (
@@ -47,7 +23,26 @@ export default function Transparency() {
         <p>Verifique nossos documentos de regularização cadastral:</p>
       </main>
       <section className={style.transparency__files}>
-        {renderTransparencyFiles()}
+        <a
+          href={transparency.url}
+          target="_blank"
+          key={transparency.label}
+          rel="noreferrer"
+        >
+          <div className={style.transparency__file}>
+            <div>
+              <Image
+                src={transparency.imageSrc}
+                alt={transparency.label}
+                title="Clique para abrir"
+              />
+            </div>
+            <p>
+              {transparency.label}
+              {externalLinkIcon()}
+            </p>
+          </div>
+        </a>
       </section>
     </article>
   );
