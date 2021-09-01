@@ -13,12 +13,7 @@
 
 .transparency__file {
   @apply flex flex-col mt-1 md:mt-0 cursor-pointer p-3 rounded-lg items-center gap-3;
-  @apply transition-transform duration-150 transform hover:scale-105 hover:shadow-md;
-  @apply hover:bg-tasman;
-}
-
-.transparency__fileImage {
-  @apply hidden md:block;
+  @apply transition-all duration-150 hover:shadow-md;
 }
 
 .transparency__fileImage img {
@@ -26,5 +21,5 @@
 }
 
 .transparency__file p {
-  @apply underline font-bold text-lg sm:text-xl;
+  @apply flex gap-2 items-end underline font-bold text-lg sm:text-xl;
 }
