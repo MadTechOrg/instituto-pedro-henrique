@@ -14,7 +14,7 @@ const donationOptions = [
     image: Clothes,
   },
   {
-    label: 'Materiais escolares e artigos de papelaria',
+    label: 'Materiais escolares',
     image: Materials,
   },
   {
@@ -37,7 +37,7 @@ const donationOptions = [
 
 const renderDonatioOptions = () => donationOptions.map(({ label, image }) => (
   <div className={style.donate__option} key={label}>
-    <div className={style.donate__optionImage}>
+    <div>
       <Image
         src={image}
         alt={label}

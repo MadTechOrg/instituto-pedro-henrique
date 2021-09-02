@@ -1,6 +1,6 @@
 .donate {
   @apply flex h-auto justify-between items-center flex-col;
-  @apply bg-watusi p-2 py-10 md:p-20 min-h-full;
+  @apply bg-conch p-2 py-10 md:p-20 min-h-full;
 }
 
 .donate__optionsContainer {
@@ -12,12 +12,8 @@
   @apply flex flex-col justify-center items-center;
 }
 
-.donate__optionImage {
-  @apply w-24 md:w-44;
-}
-
 .donate__option p {
-  @apply text-center text-lg md:text-2xl font-bold;
+  @apply text-center h-14 text-lg md:text-2xl font-bold;
 }
 
 .donate__money {
