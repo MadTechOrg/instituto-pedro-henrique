@@ -8,5 +8,5 @@
 }
 
 .partners__item {
-  @apply flex justify-center items-center px-14 md:px-20 py-5;
+  @apply flex flex-grow-0 justify-center items-center px-14 md:px-20 py-5;
 }
