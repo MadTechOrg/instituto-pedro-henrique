@@ -34,3 +34,7 @@
 .socialAction__imageTitle p {
   @apply text-sm sm:text-base text-white overflow-ellipsis whitespace-nowrap;
 }
+
+.socialAction__redirectLink {
+  @apply underline font-bold pt-20 text-xl cursor-pointer;
+}
