@@ -1,6 +1,6 @@
 .about {
   @apply flex justify-center items-center flex-col;
-  @apply bg-conch w-full h-auto p-2 py-28 md:p-24;
+  @apply bg-conch w-full h-auto p-2 pt-28 pb-20 md:p-24;
 }
 
 .about__content {
@@ -24,13 +24,17 @@
 }
 
 .about__project p {
-  @apply text-2xl w-2/4 md:w-full font-bold md:mt-2 text-center;
+  @apply text-2xl w-2/4 md:w-full font-bold md:mt-2 text-center cursor-pointer;
 }
 
 .about__projectImage {
-  @apply w-2/4;
+  @apply w-2/4 cursor-pointer;
 }
 
 .about__projectImage img {
   @apply w-full sm:w-60;
+}
+
+.about__redirectLink {
+  @apply underline font-bold pt-20 text-xl;
 }
